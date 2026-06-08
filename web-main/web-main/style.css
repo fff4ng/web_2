@@ -1,0 +1,205 @@
+@charset "UTF-8";
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F4F0EA;
+    z-index: 1000;
+    padding: 5px 20px;      /* 調小上下間距，降低 navbar 高度 */
+    display: flex;           /* 啟用 Flexbox */
+    align-items: center;     /* 垂直置中內容 */
+    justify-content: space-between; /* 左右拉開：品牌靠左，選單靠右 */
+    box-sizing: border-box;  /* 避免 padding 影響寬度 */
+}
+
+
+.brand {
+    color:#4A3F35;
+    background-color:#F4F0EA; 
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.menu {
+    background-color:#F4F0EA; 
+    list-style: none;        
+    margin: 0;
+    padding: 0;
+    display: flex;          
+    justify-content: center; 
+   
+}
+
+/* li 設定 */
+.menu li {
+    margin: 0 15px;         
+}
+
+/* a 樣式 */
+.menu li a {
+    display: block;
+    padding: 15px 20px;
+    color:#4A3F35;
+    text-decoration: none;
+}
+
+/* 滑鼠移過效果 */
+.menu li a:hover {
+    background-color:#E2DBD2;
+    border-radius: 20px;
+}
+
+.title-section {
+    display: flex;
+    align-items: center;  /* 垂直置中 */
+    gap: 5px;               /* 完全沒有間距 */
+    text-decoration: none;
+}
+
+.title-section h1 {
+    margin: 0;            /* 清除 h1 預設上下左右 margin */
+    text-decoration: none;
+}
+
+
+.fi{
+    color: #4A3F35;
+    font-size: 2rem; 
+    text-align: center;
+    
+}
+
+/* --- 基礎設定 --- */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F4F0EA; /* 我們選的燕麥白 */
+    font-family: serif; /* 侘寂風襯線體 */
+    color: #4A3F35; /* 枯茶色 */
+}
+
+/* --- [最上面] Banner 樣式 --- */
+.main-banner {
+    width: 100%;
+    height: 60vh; /* Banner 高度佔螢幕 60% */
+    position: relative;
+    overflow: hidden;
+}
+
+.main-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 圖片填滿但不變形 */
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 文字置中 */
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* 增加文字可讀性 */
+}
+
+/* --- [下面] 圖文交錯核心樣式 --- */
+.menu-section {
+    max-width: 1200px; /* 限制整體最大寬度 */
+    margin: 50px auto; /* 上下留白，左右置中 */
+    padding: 0 20px;
+}
+
+.menu-item {
+    display: flex; /* 啟用 Flexbox */
+    align-items: center; /* 圖片文字垂直置中 */
+    margin-bottom: 80px; /* 每道菜之間的距離，侘寂風要加大留白 */
+    gap: 40px; /* 圖片和文字之間的距離 */
+}
+
+.item-image, .item-text {
+    flex: 1; /* 圖片和文字各佔一半寬度 */
+    width: 50%;
+}
+
+.item-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* 侘寂風小技巧：圖片加一點淡淡的陰影 */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.item-text h3 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.item-text p {
+    line-height: 1.8; /* 加大行距，更有閱讀感 */
+}
+
+
+.menu-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.divider-text {
+    color:black;
+    display: flex;
+    align-items: center;
+    margin: 50px 0; /* 上下間距 */
+    /* font-weight: bold; */
+    text-align: center;
+}
+
+.divider-text::before,
+.divider-text::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #ccc;
+    
+}
+
+.divider-text span {
+    margin: 0 15px;
+    color: #666;
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+
+.divider-text {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 確保內容完全水平置中 */
+    max-width: 1200px;       /* 讓它的寬度跟上面的選單 menu-section 一致 */
+    margin: 80px auto 40px auto; /* 透過 auto 讓整個區塊在網頁置中，並加大上方留白 */
+    text-align: center;
+}
+
+.contact {
+    max-width: 600px;
+    margin: 0 auto 120px auto; 
+    text-align: center;        
+    line-height: 2;           
+}
+
+.contact p {
+    margin: 10px 0;
+}
+
+footer{
+    text-align: center;
+    background-color: #F4F0EA;
+    color: #4A3F35;
+    padding: 5px;
+    /* font-size: 1.2rem; */
+    text-decoration: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
